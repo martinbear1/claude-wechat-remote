@@ -1,1 +1,1 @@
-2ddc96047f33936e49f932669706b49af5d83d44c56c132e01d72eea6fc81d4d  claude-wechat-remote-0.1.0-dev.41-universal.zip
+d018b366301e662e6d7d7622442c886eb427f6dd763a3359fb72f2f90f3ed71b  claude-wechat-remote-0.1.0-dev.45-universal.zip
