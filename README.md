@@ -31,7 +31,9 @@ claude plugin install harness-wechat --marketplace martinbear1/claude-wechat-rem
 3. 在打开的本机网页点击“开启远程连接”，显示二维码，用小程序“添加节点”扫码。
 4. 保持至少一个已加载插件的 Claude 终端运行，即可在手机选择 CLI 节点使用。
 
-无需另跑连接服务脚本，关闭全部 Claude 终端后 CLI 节点离线。原有 CLI 会话先在终端恢复一次即可接入，不会把 Desktop 历史自动归入 CLI。
+无需另跑连接服务脚本，关闭全部 Claude 终端后 CLI 节点离线。
+
+自动列出当前 Claude 用户目录中可识别的 CLI 历史，并按原目录整理工作区，无需逐个打开。手机继续原会话，不另开副本；同一文件夹里的 Desktop 历史仍留在 Desktop 节点。缺少来源信息的旧记录需先在 CLI 明确接入；来源冲突的记录请先在电脑核对。
 
 手机新建会话：选择工作区 → 进入空白页 → 首次真正发送时创建会话，不发占位消息。
 
