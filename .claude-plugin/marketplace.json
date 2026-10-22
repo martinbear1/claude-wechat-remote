@@ -3,17 +3,17 @@
   "owner": {
     "name": "martinbear1"
   },
-  "description": "微信远程连接 · Windows x64 预览；Desktop 与 CLI 独立配对",
+  "description": "微信远程连接 · Windows / Intel Mac 预览；Desktop 与 CLI 独立配对",
   "plugins": [
     {
       "name": "harness-wechat",
-      "displayName": "微信远程连接（Windows 预览）",
-      "description": "从微信小程序继续 Claude Code 会话；Desktop 和 CLI 分别扫码。仅 Windows x64 预览。",
-      "version": "0.1.0-dev.32",
+      "displayName": "微信远程连接（预览）",
+      "description": "从微信小程序继续 Claude Code 会话；Desktop 和 CLI 分别扫码。Windows / Intel Mac 预览；其他平台验收中。",
+      "version": "0.1.0-dev.41",
       "source": {
         "source": "archive",
-        "url": "https://github.com/martinbear1/claude-wechat-remote/releases/download/v0.1.0-dev.32/claude-wechat-remote-0.1.0-dev.32-win-x64.zip",
-        "sha256": "acbb3ae694b4f6e8dd4bcbb4c0db7ef3a06033a8426373e1588e94f1b8b11353"
+        "url": "https://github.com/martinbear1/claude-wechat-remote/releases/download/v0.1.0-dev.41/claude-wechat-remote-0.1.0-dev.41-universal.zip",
+        "sha256": "2ddc96047f33936e49f932669706b49af5d83d44c56c132e01d72eea6fc81d4d"
       }
     }
   ]
