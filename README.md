@@ -10,22 +10,31 @@ Claude 微信远程连接 · 跨平台预览
 将 Claude Desktop 的 Code 会话或 Claude Code CLI 接入微信小程序。
 同一套插件，两种独立节点：身份、二维码、配对资料和连接开关互不混用。
 这是预览版，不是 DSH 插件升级包。已装旧研发包的电脑请先核对安装来源，勿重复安装。
-已验证 Windows x64 和 Intel Mac：Windows 的 Claude Code 2.1.304 / Desktop 3.1623.1；
+当前提供 Windows x64 和 Intel Mac 预览：Windows 的 Claude Code 2.1.304 / Desktop 3.1623.1；
 Intel Mac 的 macOS 15.7.5、Claude Code 2.1.308 / Desktop 3.1623.4（第三方 API 模式）。
-Linux x64 CLI 已通过隔离安装、更新和启动验证，手机公网仍待验收；Apple Silicon 尚未实机验收。
+Linux x64 CLI（Ubuntu 22.04.5、Claude Code 2.1.304）已验证公开安装、更新、扫码配对
+和真实模型调用；手机公网收发仍待验收。本版修复 Linux 新会话首次发送和工作区分组问题，
+仍待手机复测。Apple Silicon、Linux ARM64 尚未实机验收。
 包含运行组件不等于已验证支持，Linux Desktop 不在本次支持范围。
-请先确认 Claude 本身能正常聊天。Windows 和 Mac 使用下面相同的仓库与安装流程，
+请先确认 Claude 本身能正常聊天。三种系统的 CLI 使用同一条安装命令；Windows 和 Mac
+的 Desktop 使用同一个插件仓库。终端里的 claude 与 Desktop 内置版本可能不同，
+安装前可执行 claude --version 核对；旧版请先用 Claude 的原生更新方式升级。
+当前验收版本见上文；旧版 2.1.270 不适用于本插件的这套流程。
 无需另装 Node.js、手工配置 MCP 或运行外部连接脚本。
 首次启动会自动下载并校验本机运行组件，请保持网络畅通；不需要自己选系统包。
 组件从 Node.js 官方下载并保存在当前 Claude 配置下，后续可复用，不重复下载。
 下载失败不会清除配对；网络恢复后重新加载插件即可，勿卸载清理数据。
+
+快速选择：只用 Desktop 请看 DESKTOP-START.txt；只用 CLI 请看 CLI-START.txt。
+两端都用：同一用户配置只装一次，但 Desktop、CLI 分别开启连接、分别扫码。
+先安装哪一端均可；仅安装或配对 CLI 不会自动开启 Desktop 首页连接。
 
 一、CLI 用户
 1. 在终端执行一条原生命令：
    claude plugin install harness-wechat --marketplace martinbear1/claude-wechat-remote --scope user
 2. 在自己的工作目录正常运行 claude。工作区信任提示由你自行确认。
 3. 点“微信 CLI 节点 · 打开连接管理 / 手机配对”，或输入 /wechat-connect。
-4. 在本机网页点“开启远程连接”→“显示配对二维码”，用小程序添加节点扫码。
+4. 在本机网页点“开启远程连接”→“显示 / 刷新配对二维码”，用小程序添加节点扫码。
 5. 保持至少一个已加载插件的 Claude 终端运行，在手机选择该 CLI 节点。
 无需另跑连接服务脚本；关闭全部 Claude 终端后 CLI 节点离线。
 自动列出当前 Claude 用户目录中可识别的 CLI 历史，并按原目录整理工作区，无需逐个打开。
@@ -34,6 +43,9 @@ Linux x64 CLI 已通过隔离安装、更新和启动验证，手机公网仍待
 手机新建：选工作区→空白页→首次真正发送才创建会话，不发占位消息。
 空白页可选择当前原生配置提供的模型与推理强度，第一条消息按该选择发送。
 可用选项以 Claude 和模型服务的实际能力为准。
+如果通过 SSH 使用远程 Linux，管理链接里的 127.0.0.1 指的是 Linux 主机，
+不是手上的电脑。须通过可信 SSH 将链接中的同一个端口转发到本机，再打开原链接；
+不要将管理端口开放到公网，不要转发含访问凭据的管理链接。
 
 二、Desktop 用户
 1. 在 Claude 的 Code 插件入口打开插件浏览器（Customize / Plugins，
@@ -49,6 +61,7 @@ Linux x64 CLI 已通过隔离安装、更新和启动验证，手机公网仍待
 如果提示设置未完成，先刷新核对；不要反复点击或手工覆盖配置。
 配对入口位于原生连接侧栏，不是插件管理详情页。
 Desktop 目前可从手机继续原有会话；手机创建普通新聊天仍未接通，请先在电脑新建。
+手机新增 Desktop 工作区也尚未接通，请先在电脑选择目录；这不影响已有会话的目录同步。
 
 三、先装一端，再使用另一端
 同一电脑、同一用户、同一个 Claude 配置目录：插件只需安装一次。
@@ -89,4 +102,6 @@ Desktop 可在连接侧栏关闭“随 Desktop 启动”；停用插件后首页
 新装接入当前用户的原生工作区；旧安装明确指定的目录限制不会随更新放宽。
 Claude 的工作区信任、工具授权和并发限制仍有效，不会自动批准。
 第三方 API 沿用 Claude 自己的配置，插件不设置、复制或展示模型密钥。
+
+Claude 原生插件管理说明：https://code.claude.com/docs/en/discover-plugins
 ```
