@@ -9,11 +9,11 @@
       "name": "harness-wechat",
       "displayName": "微信远程连接（预览）",
       "description": "从微信小程序继续 Claude Code 会话；Desktop 和 CLI 分别扫码。Windows / Intel Mac 预览；其他平台验收中。",
-      "version": "0.1.0-dev.47",
+      "version": "0.1.0-dev.48",
       "source": {
         "source": "archive",
-        "url": "https://github.com/martinbear1/claude-wechat-remote/releases/download/v0.1.0-dev.47/claude-wechat-remote-0.1.0-dev.47-universal.zip",
-        "sha256": "6c8867465e22ec4b5c43bcf8992d2169c9dcab904ad05c0d3e24004490314c75"
+        "url": "https://github.com/martinbear1/claude-wechat-remote/releases/download/v0.1.0-dev.48/claude-wechat-remote-0.1.0-dev.48-universal.zip",
+        "sha256": "89380375268fc797987e752d85e6bd4183866a87313d9ceab7b08289589795a2"
       }
     }
   ]

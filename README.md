@@ -13,8 +13,8 @@ Claude 微信远程连接 · 跨平台预览
 当前提供 Windows x64 和 Intel Mac 预览：Windows 的 Claude Code 2.1.304 / Desktop 3.1623.1；
 Intel Mac 的 macOS 15.7.5、Claude Code 2.1.308 / Desktop 3.1623.4（第三方 API 模式）。
 Linux x64 CLI（Ubuntu 22.04.5、Claude Code 2.1.304）已验证公开安装、更新、扫码配对
-和真实模型调用；手机公网收发仍待验收。本版修复 Linux 新会话首次发送和工作区分组问题，
-仍待手机复测。Apple Silicon、Linux ARM64 尚未实机验收。
+和真实模型调用；手机公网收发中的新建会话与模型读取已获测试确认，
+更多工作区与附件场景仍待验证。Apple Silicon、Linux ARM64 尚未实机验收。
 包含运行组件不等于已验证支持，Linux Desktop 不在本次支持范围。
 请先确认 Claude 本身能正常聊天。三种系统的 CLI 使用同一条安装命令；Windows 和 Mac
 的 Desktop 使用同一个插件仓库。终端里的 claude 与 Desktop 内置版本可能不同，
